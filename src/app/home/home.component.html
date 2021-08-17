@@ -1,0 +1,39 @@
+﻿<div class="p-4">
+    <div class="p-4">
+    <div class="container">
+            <h1>Welcome to Certificate Generator!</h1>
+            <br>
+            <p *ngIf = "isEnabled">You can click manage users and begin editing your students!</p>
+            <p *ngIf = "!isEnabled">Your certificate URL's are listed below!</p>
+            <p><a *ngIf ="isEnabled" routerLink="/users">Manage Users</a></p>
+
+            <tr  *ngFor="let certificate of certificateList">
+                <td *ngIf="!isEnabled"> <a href= "{{certificate.CertificateURL}} " > {{certificate.CertificateURL}} </a></td>
+                
+            </tr>
+
+    </div>
+</div>
+
+<!-- 
+    <div class="p-4">
+    <div class="container">
+        <h1>Hi {{user.firstName}}!</h1>
+        <p>You're logged in with Angular 9!!</p>
+        <p><a *ngIf="isEnabled" routerLink="/users">Manage Users</a></p>
+    </div>
+</div>
+
+
+
+
+    <div class="container">
+            <h1>Hi {{user.firstName}}!</h1>
+            <p *ngIf = "isEnabled">You can click manage users and begin editing your students!</p>
+            <p *ngIf = "!isEnabled">Your certificate URL's are listed below!</p>
+            <p><a *ngIf = "isEnabled" routerLink="/users">Manage Users</a></p>
+    </div>
+</div>
+
+-->
+

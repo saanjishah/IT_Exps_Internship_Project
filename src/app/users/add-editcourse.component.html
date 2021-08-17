@@ -1,0 +1,73 @@
+<h1> Enroll in Course </h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+            
+        <div class=form-row>
+            <div class="form-group col">
+                <label for="coursedropdown"><b>IT Expert Course Name: </b> </label> <br>
+            <input type="checkbox" name="courses" value="one" (change)="onCheckboxChagen($event, 1)"
+            > Project Management Professional <br>
+              <input type="checkbox" name="courses" value="two" (change)="onCheckboxChagen($event, 2)"
+              > MS Project <br>
+              <input type="checkbox" name="courses" value="three" (change)="onCheckboxChagen($event, 3)"
+              > Business Analysis <br>
+              <input type="checkbox" name="courses" value="four" (change)="onCheckboxChagen($event, 4)"
+              > Lean Six Sigma <br>
+              <input type="checkbox" name="courses" value="five" (change)="onCheckboxChagen($event, 5)"
+              > Scaled Agile Framework <br>
+              <input type="checkbox" name="courses" value="six" (change)="onCheckboxChagen($event, 6)"
+              > Certified Scrum Product Owner <br>
+              <input type="checkbox" name="courses" value="seven" (change)="onCheckboxChagen($event, 7)"
+              > Web Development <br>
+             <input type="checkbox" name="courses" value="eight" (change)="onCheckboxChagen($event, 8)"> Linux Administration <br>
+              <input type="checkbox" name="courses" value="nine" (change)="onCheckboxChagen($event, 9)"> Database SQL Programming <br>
+              <input type="checkbox" name="courses" value="ten" (change)="onCheckboxChagen($event, 10)"> Internet Of Things <br>
+              <input type="checkbox" name="courses" value="eleven" (change)="onCheckboxChagen($event, 11)"> Quality Assurance <br>
+              <input type="checkbox" name="courses" value="twelve" (change)="onCheckboxChagen($event, 12)"> Agile Scrum <br>
+              <input type="checkbox" name="courses" value="thirteen" (change)="onCheckboxChagen($event, 13)"> Big Data management and Analytics <br>
+              <input type="checkbox" name="courses" value="fourteen" (change)="onCheckboxChagen($event, 14)"> Linux Administration <br>
+              <input type="checkbox" name="courses" value="fifteen" (change)="onCheckboxChagen($event, 15)"> Youth Programming <br>
+              <input type="checkbox" name="courses" value="sixteen" (change)="onCheckboxChagen($event, 16)"> Office Administration <br>
+              <input type="checkbox" name="courses" value="seventeen" (change)="onCheckboxChagen($event, 17)"> Leadership Development <br>
+              <input type="checkbox" name="courses" value="eighteen" (change)="onCheckboxChagen($event, 18)"> Data Analytics <br>
+              <input type="checkbox" name="courses" value="nineteen" (change)="onCheckboxChagen($event, 19)"> Java Programming <br>
+              <input type="checkbox" name="courses" value="twenty" (change)="onCheckboxChagen($event, 20)"> IT Infrastructure Library <br>
+              <input type="checkbox" name="courses" value="twentyone" (change)="onCheckboxChagen($event, 21)"> Big Data Management and Analytic <br>
+              <input type="checkbox" name="courses" value="twentytwo" (change)="onCheckboxChagen($event, 22)"> Data Architect and Data Modeling <br>
+              <input type="checkbox" name="courses" value="twentythree" (change)="onCheckboxChagen($event, 23)"> Python Programming <br>
+              <input type="checkbox" name="courses" value="twentyfour" (change)="onCheckboxChagen($event, 24)"> AWS Cloud Practioner <br>
+              <input type="checkbox" name="courses" value="twentyfive" (change)="onCheckboxChagen($event, 25)"> Selenium <br>
+              <input type="checkbox" name="courses" value="twentysix" (change)="onCheckboxChagen($event, 26)"> Dev ops <br> 
+            </div>
+        </div>
+
+        
+
+    <div class="form-group">
+
+        <button type="submit" [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save
+        </button>
+
+        <a  routerLink="/users" class="btn btn-link">Cancel</a>
+    </div>
+</form>
+
+
+<!--
+    <div class="form-group col">
+            <label for="coursedropdown">IT Expert Course Names: </label><br>
+            <div style="position:relative;width:400px;height:40px;border:0;padding:0;margin:0;">
+                <select onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
+                    <option></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+
+            <a routerLink="/userspage" class="btn btn-primary">Save</a>
+
+-->
+

@@ -1,0 +1,65 @@
+<h1>Courses</h1>
+
+<button type="submit" (click)="gotoaddcourse()" class="btn btn-sm btn-success mr-2"> Enroll in Course </button>
+
+
+<a routerLink="/users" class="btn btn-sm btn-success">Back</a>
+
+<br><br>
+
+<tr  *ngFor="let certificate of certificateList">
+    <td> <a href= "{{certificate}} " > Link: {{certificate}} </a></td>
+    
+</tr>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 10%">Course ID</th>
+            <th style="width: 30%">Course Name</th>
+            <th style="width: 20%">Course Start</th>
+            <th style="width: 20%">Course End</th>
+            <th style="width: 20%"> Edit</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of displayCourseList">
+            <td>{{course.courseID}}</td>
+            <td>{{course.coursename}}</td>
+            <td>{{course.coursestartdate}}</td>
+            <td>{{course.courseenddate}}</td>
+
+            <td style="white-space: nowrap">
+
+                <button (click)="deleteEnroll(course.courseID)" class="btn btn-sm btn-danger btn-delete-course mr-1">
+                    <span *ngIf="course.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!course.isDeleting">Delete</span>
+                </button>
+                <button *ngIf = "!course.hasCertGen" (click)= "onCertGenerate(course.courseID)" type="button" class="btn btn-sm btn-info mr-1"> Generate Certificate </button>
+                <button *ngIf = "course.hasCertGen" (click)= "showLink(course.courseID)" type="button" class="btn btn-sm btn-primary"> View Certificate Link </button>
+
+            </td>
+        </tr>
+        <tr *ngIf="!courseList">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!--
+                    <a routerLink="edit/{{course.courseID}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+
+
+    [disabled]="student.isDeleting"
+
+    <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Student</a>
+    
+    <a routerLink="onEditClick(student.studentID)" class="btn btn-sm btn-primary mr-1">Edit</a>
+
+
+-->
+
